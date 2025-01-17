@@ -1,4 +1,13 @@
-const io = require("socket.io")(3000, {
+const express = require("express");
+const { createServer } = require("node:http");
+
+const cors = require("cors");
+
+const app = express();
+const httpServer = createServer(app);
+
+app.use(cors());
+const io = require("socket.io")(httpServer, {
     cors: {
       origin: "http://localhost:5173",
       methods: ["GET", "POST"]
@@ -71,4 +80,8 @@ const io = require("socket.io")(3000, {
       console.log("A user disconnected:", socket.id);
     });
   });
-  
+
+const port = process.env.PORT || 3000;
+httpServer.listen(port, () => {
+  console.log(`Server is running on port ${port} `);
+})
