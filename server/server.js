@@ -5,7 +5,7 @@ const io = require("socket.io")(3000, {
     }
   });
   
-  const rooms = {}; // Store room state
+  const rooms = {}; 
   
   io.on("connection", (socket) => {
     console.log("A user connected:", socket.id);
