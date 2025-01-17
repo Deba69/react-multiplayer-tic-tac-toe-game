@@ -1,0 +1,203 @@
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: #23272f;
+    color: white;
+    font-family: 'Courier New', Courier, monospace;
+  }
+  
+h1 {
+    text-align: center;
+}
+.board {
+  display: grid;
+  grid-template-columns: 100px 100px 100px;
+  grid-template-rows: 100px 100px 100px;
+  cursor: pointer;
+  position: relative;
+}
+
+.tile {
+  color: currentColor;
+  font-size: 2em;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.right-border {
+  border-right: 0.2em solid #0074a6;
+}
+
+.bottom-border {
+  border-bottom: 0.2em solid #0074a6;
+}
+
+.strike {
+  position: absolute;
+  background-color: darkorange;
+}
+
+.strike-row-1 {
+  width: 100%;
+  height: 4px;
+  top: 15%;
+}
+.strike-row-2 {
+  width: 100%;
+  height: 4px;
+  top: 48%;
+}
+.strike-row-3 {
+  width: 100%;
+  height: 4px;
+  top: 83%;
+}
+.strike-column-1 {
+  height: 100%;
+  width: 4px;
+  left: 15%;
+}
+.strike-column-2 {
+  height: 100%;
+  width: 4px;
+  left: 48%;
+}
+.strike-column-3 {
+  height: 100%;
+  width: 4px;
+  left: 83%;
+}
+.strike-diagonal-1 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(45deg);
+}
+.strike-diagonal-2 {
+  width: 90%;
+  height: 4px;
+  top: 50%;
+  left: 5%;
+  transform: skewY(-45deg);
+}
+
+
+.game-over {
+  text-align: center;
+  border: 8px ;
+  padding: 10px;
+  margin-top: 50px;
+  font-size: 30px;
+  color:white;
+  box-shadow: 0 0 5px #FF8A50, 0 0 25px #FF8A50, 0 0 50px #FF8A50,
+    0 0 200px #FF8A50;
+  cursor: pointer;
+  background-color: darkorange;
+ 
+  
+}
+
+.reset-button {
+  margin-top: 50px;
+  padding: 20px;
+  background-color: #ececec;
+  color: rgb(49, 51, 53);
+  width: 100%;
+  font-size: 1.5em;
+  border-radius: 50px;  
+  
+}
+.reset-button:hover {
+  background-color: #e5edee;
+  color: #212121;
+  box-shadow: 0 0 5px #d8dddd, 0 0 25px #d5dbdb, 0 0 50px #e1e8e9,
+    0 0 200px #03e9f4;
+  cursor: pointer;
+}
+
+
+html {
+  height: 100%;
+  background: #223;
+  display: grid;
+  place-items: center;
+}
+
+.box {
+  width: 80vmin;
+  height: 80vmin;
+  display: grid;
+  place-content: center;
+  color: white;
+  text-shadow: 0 1px 0 #000;
+  -webkit-box-shadow:0 0 20px blue; 
+  -moz-box-shadow: 0 0 20px blue; 
+  box-shadow:0 0 20px blue;
+
+}
+
+/* Center the room join section */
+.room-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 15px;
+  margin-bottom: 20px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Input Field */
+.room-container input {
+  width: 250px;
+  padding: 12px;
+  border: 2px solid #3498db;
+  border-radius: 6px;
+  font-size: 16px;
+  outline: none;
+  transition: all 0.3s ease;
+}
+
+.room-container input:focus {
+  border-color: #2ecc71;
+  box-shadow: 0 0 10px rgba(46, 204, 113, 0.5);
+}
+
+/* Join Room Button */
+.room-container button {
+  background: #3498db;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 12px 20px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.room-container button:hover {
+  background: #2980b9;
+  transform: scale(1.05);
+}
+
+.room-container button:active {
+  transform: scale(0.95);
+}
+
+/* Display Room & Player Info */
+.room-info {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 10px;
+  color: white;
+  background: #2c3e50;
+  padding: 10px;
+  border-radius: 6px;
+}
