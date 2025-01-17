@@ -5,7 +5,7 @@ import GameState from "./gamestate";
 import Reset from "./reset";
 import io from "socket.io-client";
 
-const socket = io.connect("http://localhost:3000");
+const socket = io.connect("https://react-multiplayer-tic-tac-toe-game.onrender.com");
 
 const PLAYER_X = "X";
 const PLAYER_O = "O";
