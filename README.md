@@ -17,7 +17,7 @@ cd react-multiplayer-tic-tac-toe-game
 ### To start the client
 ```sh
 cd react-tictactoe
-npm install
+npm i
 npm run dev
 ```
 ### To start the server
