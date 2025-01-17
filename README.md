@@ -4,7 +4,9 @@ This is a full stack tic tac toe game.  Here you can play with friends multiplay
 A real-time multiplayer Tic-Tac-Toe game using React & WebSockets.
 
 ## 📸 Screenshots
-
+![Game Lobby](assets/game.png)
+![Game Board](assets/gameplay.png)
+![Game Win](assets/win.png)
 
 ## 🚀 Quick Start
 ```sh
