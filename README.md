@@ -10,5 +10,18 @@ A real-time multiplayer Tic-Tac-Toe game using React & WebSockets.
 ```sh
 git clone https://github.com/Deba69/react-multiplayer-tic-tac-toe-game.git
 cd react-multiplayer-tic-tac-toe-game
+```
+
+### To start the client
+```sh
+cd react-tictactoe
 npm install
+npm run dev
+```
+### To start the server
+```sh
+cd server
+npm i
 npm start
+```
+
